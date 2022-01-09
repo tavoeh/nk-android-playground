@@ -1,12 +1,23 @@
 package com.tavoeh.playground.presentation
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.tavoeh.playground.R
+import androidx.appcompat.app.AppCompatActivity
+import com.tavoeh.firstfearture.presentation.LandingActivity
+import com.tavoeh.playground.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnFirstFeature.setOnClickListener {
+            val intent = Intent(this, LandingActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

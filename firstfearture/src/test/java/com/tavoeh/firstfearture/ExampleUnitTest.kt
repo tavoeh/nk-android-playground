@@ -1,4 +1,4 @@
-package com.tavoeh.playground
+package com.tavoeh.firstfearture
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

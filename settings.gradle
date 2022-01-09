@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "My Playground"
 include ':app'
+include ':firstfearture'

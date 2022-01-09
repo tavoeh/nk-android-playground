@@ -13,6 +13,19 @@ buildscript {
     }
 }
 
+subprojects { subProject ->
+    afterEvaluate {
+        if (subProject.plugins.hasPlugin("kotlin") && subProject.plugins.hasPlugin("java-library")) {
+            subProject.kotlin.copyClassesToJavaOutput = true
+            subProject.jar.duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+        }
+    }
+    //this allows to run ktlint for a specific module
+    // example usage: ./gradlew :data:ktlintFormat
+    apply from: "$project.rootDir/kotlin-code-quality.gradle"
+}
+
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
