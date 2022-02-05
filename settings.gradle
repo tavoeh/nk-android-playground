@@ -7,5 +7,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "My Playground"
 include ':app'
-include ':firstfearture'
+include ':firstfeature'
 include ':secondfeature'

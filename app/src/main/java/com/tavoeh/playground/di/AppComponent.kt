@@ -2,6 +2,7 @@ package com.tavoeh.playground.di
 
 import android.app.Application
 import com.tavoeh.firstfearture.FirstFeature
+import com.tavoeh.secondfeature.SecondFeature
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -16,4 +17,5 @@ interface AppComponent {
     }
 
     val firstFeature: FirstFeature
+    val secondFeature: SecondFeature
 }

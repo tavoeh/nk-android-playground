@@ -37,7 +37,8 @@ android {
 
 dependencies {
 
-    implementation project(path: ':firstfearture')
+    implementation project(path: ':firstfeature')
+    implementation project(path: ':secondfeature')
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'

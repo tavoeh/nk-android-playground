@@ -5,7 +5,8 @@
     <application>
         <activity
             android:name=".presentation.LandingActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/feature_name"/>
     </application>
 
 </manifest>

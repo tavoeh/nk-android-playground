@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.tavoeh.secondfeature.presentation.ui.theme.MyPlaygroundTheme
 
-class LandingScreen : ComponentActivity() {
+class LandingActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Playground</string>
+    <string name="first_feature">First Feature</string>
+    <string name="second_feature">Second Feature</string>
 </resources>

@@ -16,13 +16,13 @@ class FirstFeature(dependencies: Dependencies) {
         val settings: Settings
     }
 
-    interface Provider {
-        val firstFeature: FirstFeature
-    }
-
     interface Settings {
         val version: String
         val type: FeatureType
+    }
+
+    interface Provider {
+        val firstFeature: FirstFeature
     }
 }
 

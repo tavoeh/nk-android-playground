@@ -3,6 +3,7 @@ package com.tavoeh.playground.di
 import android.app.Application
 import com.tavoeh.firstfearture.FirstFeature
 import com.tavoeh.firstfearture.domain.model.FeatureType
+import com.tavoeh.secondfeature.SecondFeature
 import dagger.Module
 import dagger.Provides
 
@@ -22,5 +23,15 @@ object AppModule {
         }
 
         return FirstFeature(dependencies)
+    }
+
+    @Provides
+    fun providesSecondFeature(application: Application): SecondFeature {
+        val settings = object : SecondFeature.Settings {}
+        val dependencies = object : SecondFeature.Dependencies {
+            override val application: Application = application
+            override val settings: SecondFeature.Settings = settings
+        }
+        return SecondFeature(dependencies)
     }
 }
