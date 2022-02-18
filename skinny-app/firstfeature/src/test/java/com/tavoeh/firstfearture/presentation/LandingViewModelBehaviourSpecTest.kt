@@ -6,7 +6,6 @@ import com.tavoeh.firstfearture.domain.contract.FirstFeatureRepository
 import com.tavoeh.firstfearture.domain.model.FeatureType
 import io.kotest.common.ExperimentalKotest
 import io.kotest.core.spec.style.BehaviorSpec
-import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.ints.shouldBeExactly
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldHaveLength
@@ -37,7 +36,6 @@ class LandingViewModelBehaviourSpecTest : BehaviorSpec({
         viewModel = LandingViewModel(repository, settings)
     }
 
-
     Given("name is sam") {
         val name = "sam"
 
@@ -45,7 +43,6 @@ class LandingViewModelBehaviourSpecTest : BehaviorSpec({
             name.shouldHaveLength(3)
         }
     }
-
 
     Given("two numbers") {
         val a = 2
@@ -97,5 +94,3 @@ class LandingViewModelBehaviourSpecTest : BehaviorSpec({
         }
     }
 })
-
-

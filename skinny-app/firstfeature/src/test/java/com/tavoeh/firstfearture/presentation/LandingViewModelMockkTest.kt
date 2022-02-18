@@ -4,8 +4,9 @@ import app.cash.turbine.test
 import com.tavoeh.firstfearture.FirstFeature
 import com.tavoeh.firstfearture.domain.contract.FirstFeatureRepository
 import com.tavoeh.firstfearture.domain.model.FeatureType
-import com.tavoeh.firstfearture.presentation.LandingViewModel.ViewState.*
-import io.kotest.matchers.should
+import com.tavoeh.firstfearture.presentation.LandingViewModel.ViewState.Data
+import com.tavoeh.firstfearture.presentation.LandingViewModel.ViewState.Failure
+import com.tavoeh.firstfearture.presentation.LandingViewModel.ViewState.Loading
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.every
@@ -72,4 +73,3 @@ class LandingViewModelMockkTest {
         }
     }
 }
-
