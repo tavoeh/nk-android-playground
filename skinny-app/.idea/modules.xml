@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My_Playground.iml" filepath="$PROJECT_DIR$/.idea/modules/My_Playground.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/My_Playground.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/My_Playground.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstfeature/My_Playground.firstfeature.iml" filepath="$PROJECT_DIR$/.idea/modules/firstfeature/My_Playground.firstfeature.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/secondfeature/My_Playground.secondfeature.iml" filepath="$PROJECT_DIR$/.idea/modules/secondfeature/My_Playground.secondfeature.iml" />
+    </modules>
+  </component>
+</project>

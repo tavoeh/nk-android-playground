@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tavoeh.firstfearture">
+
+    <application>
+        <activity
+            android:name=".presentation.LandingActivity"
+            android:exported="false"
+            android:label="@string/feature_name"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,265 @@
+[
+  {
+    "projectPath": ":",
+    "dependencyAdvice": [],
+    "pluginAdvice": [],
+    "shouldFail": false
+  },
+  {
+    "projectPath": ":app",
+    "dependencyAdvice": [
+      {
+        "dependency": {
+          "identifier": "com.squareup.leakcanary:leakcanary-android",
+          "resolvedVersion": "2.8.1",
+          "configurationName": "debugImplementation"
+        },
+        "usedTransitiveDependencies": [],
+        "fromConfiguration": "debugImplementation"
+      },
+      {
+        "dependency": {
+          "identifier": "javax.inject:javax.inject",
+          "resolvedVersion": "1"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [
+          {
+            "identifier": "com.google.dagger:dagger",
+            "resolvedVersion": "2.40.5",
+            "configurationName": "implementation"
+          }
+        ],
+        "toConfiguration": "implementation"
+      },
+      {
+        "dependency": {
+          "identifier": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+          "resolvedVersion": "1.6.0",
+          "configurationName": "api"
+        },
+        "usedTransitiveDependencies": [],
+        "fromConfiguration": "api"
+      }
+    ],
+    "pluginAdvice": [],
+    "shouldFail": false
+  },
+  {
+    "projectPath": ":firstfearture",
+    "dependencyAdvice": [
+      {
+        "dependency": {
+          "identifier": "androidx.activity:activity",
+          "resolvedVersion": "1.2.4"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [
+          {
+            "identifier": "androidx.activity:activity-ktx",
+            "resolvedVersion": "1.2.3"
+          },
+          {
+            "identifier": "androidx.appcompat:appcompat",
+            "resolvedVersion": "1.4.0",
+            "configurationName": "implementation"
+          },
+          {
+            "identifier": "androidx.fragment:fragment",
+            "resolvedVersion": "1.4.0"
+          }
+        ],
+        "toConfiguration": "implementation"
+      },
+      {
+        "dependency": {
+          "identifier": "androidx.appcompat:appcompat",
+          "resolvedVersion": "1.4.0",
+          "configurationName": "implementation"
+        },
+        "usedTransitiveDependencies": [],
+        "fromConfiguration": "implementation",
+        "toConfiguration": "api"
+      },
+      {
+        "dependency": {
+          "identifier": "androidx.constraintlayout:constraintlayout",
+          "resolvedVersion": "2.1.2",
+          "configurationName": "implementation"
+        },
+        "usedTransitiveDependencies": [],
+        "fromConfiguration": "implementation",
+        "toConfiguration": "api"
+      },
+      {
+        "dependency": {
+          "identifier": "androidx.lifecycle:lifecycle-common",
+          "resolvedVersion": "2.4.0"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [
+          {
+            "identifier": "androidx.lifecycle:lifecycle-livedata-core",
+            "resolvedVersion": "2.4.0"
+          },
+          {
+            "identifier": "androidx.lifecycle:lifecycle-runtime",
+            "resolvedVersion": "2.4.0"
+          }
+        ],
+        "toConfiguration": "implementation"
+      },
+      {
+        "dependency": {
+          "identifier": "androidx.lifecycle:lifecycle-livedata-core",
+          "resolvedVersion": "2.4.0"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [
+          {
+            "identifier": "androidx.fragment:fragment",
+            "resolvedVersion": "1.4.0"
+          },
+          {
+            "identifier": "androidx.lifecycle:lifecycle-livedata",
+            "resolvedVersion": "2.4.0"
+          },
+          {
+            "identifier": "androidx.lifecycle:lifecycle-livedata-core-ktx",
+            "resolvedVersion": "2.4.0"
+          },
+          {
+            "identifier": "androidx.lifecycle:lifecycle-viewmodel-savedstate",
+            "resolvedVersion": "2.3.1"
+          }
+        ],
+        "toConfiguration": "api"
+      },
+      {
+        "dependency": {
+          "identifier": "androidx.lifecycle:lifecycle-runtime-ktx",
+          "resolvedVersion": "2.3.1"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [
+          {
+            "identifier": "androidx.activity:activity-ktx",
+            "resolvedVersion": "1.2.3"
+          }
+        ],
+        "toConfiguration": "implementation"
+      },
+      {
+        "dependency": {
+          "identifier": "androidx.lifecycle:lifecycle-viewmodel",
+          "resolvedVersion": "2.3.1"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [
+          {
+            "identifier": "androidx.activity:activity",
+            "resolvedVersion": "1.2.4"
+          },
+          {
+            "identifier": "androidx.fragment:fragment",
+            "resolvedVersion": "1.4.0"
+          },
+          {
+            "identifier": "androidx.lifecycle:lifecycle-viewmodel-ktx",
+            "resolvedVersion": "2.3.1"
+          },
+          {
+            "identifier": "androidx.lifecycle:lifecycle-viewmodel-savedstate",
+            "resolvedVersion": "2.3.1"
+          },
+          {
+            "identifier": "androidx.loader:loader",
+            "resolvedVersion": "1.0.0"
+          }
+        ],
+        "toConfiguration": "api"
+      },
+      {
+        "dependency": {
+          "identifier": "app.cash.turbine:turbine-jvm",
+          "resolvedVersion": "0.7.0"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [],
+        "toConfiguration": "testImplementation"
+      },
+      {
+        "dependency": {
+          "identifier": "com.google.dagger:dagger",
+          "resolvedVersion": "2.40.5",
+          "configurationName": "implementation"
+        },
+        "usedTransitiveDependencies": [],
+        "fromConfiguration": "implementation",
+        "toConfiguration": "api"
+      },
+      {
+        "dependency": {
+          "identifier": "com.squareup.retrofit2:retrofit",
+          "resolvedVersion": "2.9.0",
+          "configurationName": "implementation"
+        },
+        "usedTransitiveDependencies": [],
+        "fromConfiguration": "implementation"
+      },
+      {
+        "dependency": {
+          "identifier": "javax.inject:javax.inject",
+          "resolvedVersion": "1"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [
+          {
+            "identifier": "com.google.dagger:dagger",
+            "resolvedVersion": "2.40.5",
+            "configurationName": "implementation"
+          }
+        ],
+        "toConfiguration": "api"
+      },
+      {
+        "dependency": {
+          "identifier": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+          "resolvedVersion": "1.6.0",
+          "configurationName": "api"
+        },
+        "usedTransitiveDependencies": [],
+        "fromConfiguration": "api"
+      },
+      {
+        "dependency": {
+          "identifier": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+          "resolvedVersion": "1.5.0"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [],
+        "toConfiguration": "implementation"
+      },
+      {
+        "dependency": {
+          "identifier": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm",
+          "resolvedVersion": "1.6.0"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [],
+        "toConfiguration": "implementation"
+      },
+      {
+        "dependency": {
+          "identifier": "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm",
+          "resolvedVersion": "1.6.0"
+        },
+        "usedTransitiveDependencies": [],
+        "parents": [],
+        "toConfiguration": "testImplementation"
+      }
+    ],
+    "pluginAdvice": [],
+    "shouldFail": false
+  }
+]
