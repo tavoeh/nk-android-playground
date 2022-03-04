@@ -1,24 +1,23 @@
 package com.tavoeh.secondfeature.presentation.components
 
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.test.assert
-import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
-import androidx.compose.ui.test.onNodeWithContentDescription
-import androidx.compose.ui.test.onNodeWithTag
-import androidx.compose.ui.test.performClick
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
-class CounterKtTest {
+@RunWith(RobolectricTestRunner::class)
+@Config(instrumentedPackages = ["androidx.loader.content"])
+class CounterRobolectricTest {
 
     @get:Rule
     val composeTestRule = createComposeRule()
 
-
     @Test
-    fun testCounter_displaysCorrectValue() {
+    fun `Given count value, when Counter is initialize, Then display correct value`() {
         composeTestRule.setContent {
             Counter(count = 10)
         }
@@ -28,7 +27,7 @@ class CounterKtTest {
     }
 
     @Test
-    fun testCounter_increment() {
+    fun `Given count value, when Counter increments, Then display new value`() {
         val count = mutableStateOf(0)
         composeTestRule.setContent {
             Counter(
@@ -42,7 +41,7 @@ class CounterKtTest {
     }
 
     @Test
-    fun testCounter_decrement() {
+    fun `Given count value, when Counter decrements, Then display new value`() {
         val count = mutableStateOf(10)
 
         composeTestRule.setContent {
@@ -55,4 +54,5 @@ class CounterKtTest {
         composeTestRule.onNodeWithContentDescription("Decrement").performClick()
         composeTestRule.onNodeWithTag("Counter Value").assert(hasText("9"))
     }
+
 }

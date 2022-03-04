@@ -3,22 +3,27 @@ package com.tavoeh.secondfeature.presentation.components
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import com.tavoeh.secondfeature.presentation.LandingViewModel
-import com.tavoeh.secondfeature.presentation.LandingViewModel.UIState
+import com.tavoeh.secondfeature.presentation.LandingViewModel.UIState.*
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
-internal class ShapesScreenTest {
+@RunWith(RobolectricTestRunner::class)
+@Config(instrumentedPackages = ["androidx.loader.content"])
+class ShapesScreenKtTest {
 
     @get:Rule
     val composeTestRule = createComposeRule()
     private val viewModel = mockk<LandingViewModel>()
 
     @Test
-    fun shapesScreen() {
-        every { viewModel.uiState } returns MutableStateFlow(UIState.Error(Exception()))
+    fun `Given UI Error, when ShapesScreen is initialized, then display error message`() {
+        every { viewModel.uiState } returns MutableStateFlow(Error(Exception()))
         composeTestRule.setContent {
             ShapesScreen(viewModel = viewModel)
         }
@@ -26,8 +31,8 @@ internal class ShapesScreenTest {
     }
 
     @Test
-    fun givenLoadingDisplayLoading() {
-        every { viewModel.uiState } returns MutableStateFlow(UIState.Loading)
+    fun `Given UI is Loading, when ShapesScreen is initialized, then display loading message`() {
+        every { viewModel.uiState } returns MutableStateFlow(Loading)
         composeTestRule.setContent {
             ShapesScreen(viewModel = viewModel)
         }
@@ -35,8 +40,8 @@ internal class ShapesScreenTest {
     }
 
     @Test
-    fun givenDataDisplayData() {
-        every { viewModel.uiState } returns MutableStateFlow(UIState.Data(listOf("Hello", "World")))
+    fun `Given valid UI data, when ShapesScreen is initialized, then display valid data`() {
+        every { viewModel.uiState } returns MutableStateFlow(Data(listOf("Hello", "World")))
         composeTestRule.setContent {
             ShapesScreen(viewModel = viewModel)
         }
