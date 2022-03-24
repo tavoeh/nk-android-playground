@@ -22,13 +22,16 @@ fun Counter(
             text = count.toString(),
             Modifier.testTag("Counter Value")
         )
-        Button(onClick = increment,
-            modifier = Modifier.clearAndSetSemantics { contentDescription = "Increment" }) {
+        Button(
+            onClick = increment,
+            modifier = Modifier.clearAndSetSemantics { contentDescription = "Increment" }
+        ) {
             Text(stringResource(R.string.increment))
-
         }
-        Button(onClick = decrement,
-            modifier = Modifier.clearAndSetSemantics { contentDescription = "Decrement" }) {
+        Button(
+            onClick = decrement,
+            modifier = Modifier.clearAndSetSemantics { contentDescription = "Decrement" }
+        ) {
             Text(stringResource(R.string.decrement))
         }
     }

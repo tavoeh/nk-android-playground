@@ -20,7 +20,9 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.tavoeh.secondfeature.presentation.LandingViewModel
-import com.tavoeh.secondfeature.presentation.LandingViewModel.UIState.*
+import com.tavoeh.secondfeature.presentation.LandingViewModel.UIState.Data
+import com.tavoeh.secondfeature.presentation.LandingViewModel.UIState.Error
+import com.tavoeh.secondfeature.presentation.LandingViewModel.UIState.Loading
 import com.tavoeh.secondfeature.presentation.ui.theme.MyPlaygroundTheme
 
 @Composable
@@ -28,8 +30,7 @@ fun ShapesScreen(viewModel: LandingViewModel) {
     val state = viewModel.uiState.collectAsState().value
     Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight()
+            .wrapContentSize()
     ) {
         when (state) {
             is Data -> LazyColumn(Modifier.testTag("data")) {
@@ -39,7 +40,6 @@ fun ShapesScreen(viewModel: LandingViewModel) {
             Loading -> Text("Loading")
         }
     }
-
 }
 
 @Composable
@@ -65,7 +65,6 @@ fun DifferentShapes() {
                 .border(2.dp, Color.Blue, roundedCornerShape)
         )
     }
-
 }
 
 @Preview(showBackground = true)

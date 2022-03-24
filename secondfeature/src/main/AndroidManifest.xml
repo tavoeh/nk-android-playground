@@ -4,6 +4,9 @@
 
     <application>
         <activity
+            android:name=".presentation.AutosizeContentActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.LandingActivity"
             android:exported="false"
             android:label="@string/feature_name" />

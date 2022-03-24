@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-
 class LandingViewModel : ViewModel() {
 
     private val _uiState: MutableStateFlow<UIState<List<String>>> = MutableStateFlow(UIState.Loading)

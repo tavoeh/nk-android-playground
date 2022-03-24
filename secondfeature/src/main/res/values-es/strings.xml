@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+    <string name="feature_name">Segunda funcionalidad</string>
+    <string name="click">CLICK AQUI</string>
+    <string name="increment">Incrementar</string>
+    <string name="decrement">Disminuir</string>
+</resources>

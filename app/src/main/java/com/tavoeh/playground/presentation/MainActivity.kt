@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.tavoeh.playground.databinding.ActivityMainBinding
-import com.tavoeh.secondfeature.presentation.AutosizeContentActivity
 
 typealias FirstFeatureLanding = com.tavoeh.firstfearture.presentation.LandingActivity
 typealias SecondFeatureLanding = com.tavoeh.secondfeature.presentation.LandingActivity

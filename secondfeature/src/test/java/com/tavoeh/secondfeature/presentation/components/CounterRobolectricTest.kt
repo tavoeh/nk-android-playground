@@ -1,8 +1,13 @@
 package com.tavoeh.secondfeature.presentation.components
 
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.ui.test.*
+import androidx.compose.ui.test.assert
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.performClick
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -54,5 +59,4 @@ class CounterRobolectricTest {
         composeTestRule.onNodeWithContentDescription("Decrement").performClick()
         composeTestRule.onNodeWithTag("Counter Value").assert(hasText("9"))
     }
-
 }
